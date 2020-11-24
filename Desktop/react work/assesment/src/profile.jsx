@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
+
 
 const Profile =() => {
+
+    const [data, setData] = useState([]);
+
+
+    const getResponse = () => {
+        let url = 'https://indapi.kumba.io/webdev/assignment'
+        axios.get(url).then(res => {
+            console.log(res.data);
+            setData(res.data);
+        })
+    }
+
+    useEffect(getResponse, [setData])
+
     return(
         <div>
         <div className="container">
