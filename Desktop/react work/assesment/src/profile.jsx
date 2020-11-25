@@ -11,10 +11,11 @@ const Profile =() => {
     const getResponse = () => {
         let url = 'https://indapi.kumba.io/webdev/assignment'
         axios.get(url).then(res => {
-            console.log(res.data);
             setData(res.data);
         })
     }
+
+    console.log(data);
 
     useEffect(getResponse, [setData])
 
@@ -24,7 +25,7 @@ const Profile =() => {
               <div>
                    <img style={{width:"260px", height:"260px",borderRadius:"90px"}}
                     src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                    alt="profile-image"
+                    alt="profile"
                     />
                 </div>
                 <div>
@@ -38,15 +39,15 @@ const Profile =() => {
         </div>
             <div className="gallery">
                 <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
+                alt="customer"/>
                 <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
+                alt="customer"/>
                 <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
+                alt="customer"/>
                 <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
+                alt="customer"/>
                 <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
+                alt="customer"/>
             </div>
         </div>
     )
