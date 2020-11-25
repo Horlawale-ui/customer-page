@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
+
 
 const Profile =() => {
+
+    const [data, setData] = useState([]);
+
+
+    const getResponse = () => {
+        let url = 'https://indapi.kumba.io/webdev/assignment'
+        axios.get(url).then(res => {
+            console.log(res.data);
+            setData(res.data);
+        })
+    }
+
+    useEffect(getResponse, [setData])
+
     return(
         <div>
         <div className="container">
@@ -21,16 +37,7 @@ const Profile =() => {
                 </div>
         </div>
             <div className="gallery">
-                <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
-                <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
-                <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
-                <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
-                <img className="items" src="https://images.unsplash.com/photo-1549548731-a47a58b650f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDJ8MHw%3D&auto=format&fit=crop&w=500&q=60" 
-                alt="cart-image"/>
+                
             </div>
         </div>
     )
