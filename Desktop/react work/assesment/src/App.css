@@ -1,4 +1,9 @@
-
+.main_btn{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color:white;
+}
 .container{
     display: flex;
     justify-content: space-around;

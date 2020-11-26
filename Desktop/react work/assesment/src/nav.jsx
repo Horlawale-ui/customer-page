@@ -14,7 +14,7 @@ const Menunav = () => {
     };
 
     return (
-        <div>
+        <div className="main_btn">
             <Button onClick={HandleMenu}>Open Meun</Button>
             <Menu open={openMenu} onClose={closeMenu}>
                 <MenuItem onClick={closeMenu}>
