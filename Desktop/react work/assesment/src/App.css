@@ -5,3 +5,9 @@
     margin: 20px 0px;
     border-bottom: 1px solid grey;
 }
+table{
+    margin: 0 auto;
+}
+.totalsum{
+    float: right;
+}
