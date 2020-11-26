@@ -33,17 +33,17 @@ const Profile = () => {
                     />
                 </div>
                 <div>
-                    <h1>Aremu Khindave</h1>
+                    <h1>{data.user.name}</h1>
                     <div
                         style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
                             width: '105%',
                         }}
                     >
-                        <h3>20 Saved</h3>
-                        <h3>20 liked</h3>
-                        <h3>10 Favorite</h3>
+                        <h3>User_ID :{data.user.id}</h3>
+                        <h3>Address: {data.user.address}</h3>
+                        <h3>Phone: {data.user.phone}</h3>
+                         <h3>Like: {data.user.likes}</h3>
+                    <h3>Dislikes: {data.user.dislikes}</h3>
                     </div>
                 </div>
             </div>
@@ -55,6 +55,9 @@ const Profile = () => {
                         take me Home
                     </Button>
                 </Link>
+            </div>
+            <div>
+                    <h2>{data.restaurant.name}</h2>
             </div>
         </div>
     );
