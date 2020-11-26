@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Menu, MenuItem, Button } from '@material-ui/core';
-import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Menunav = () => {
     const [openMenu, setOpenMenu] = React.useState(null);
