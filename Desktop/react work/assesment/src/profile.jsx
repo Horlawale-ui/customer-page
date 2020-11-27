@@ -45,6 +45,18 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
+            <div className='container'>
+                <div>
+                    <h2>Restaurant Details</h2>
+                    <h4>{data.restaurant ? data.restaurant.name : ''}</h4>
+                    <h4>{data.restaurant ? data.restaurant.street : ''}</h4>
+                    <h4>{data.restaurant ? data.restaurant.city : ''}</h4>
+                    <h4>{data.restaurant ? data.restaurant.state : ''}</h4>
+                </div>
+                <div>
+                    <h2>Available Items</h2>
+                </div>
+            </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Link to='/'>
                     <Button
@@ -53,9 +65,6 @@ const Profile = () => {
                         take me Home
                     </Button>
                 </Link>
-            </div>
-            <div>
-                <h2>{data.restaurant ? data.restaurant.name : ''}</h2>
             </div>
         </div>
     );
