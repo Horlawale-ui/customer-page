@@ -14,9 +14,7 @@ const Profile = () => {
         });
     };
 
-    console.log(data);
-
-    useEffect(getResponse, [setData]);
+    useEffect(getResponse, []);
 
     return (
         <div>
@@ -33,18 +31,30 @@ const Profile = () => {
                     />
                 </div>
                 <div>
-                    <h1>{data.user.name}</h1>
+                    <h1>{data.user ? data.user.name : ''}</h1>
                     <div
                         style={{
                             width: '105%',
                         }}
                     >
-                        <h3>User_ID :{data.user.id}</h3>
-                        <h3>Address: {data.user.address}</h3>
-                        <h3>Phone: {data.user.phone}</h3>
-                         <h3>Like: {data.user.likes}</h3>
-                    <h3>Dislikes: {data.user.dislikes}</h3>
+                        <h3>User_ID :{data.user ? data.user.id : ''}</h3>
+                        <h3>Address: {data.user ? data.user.address : ''}</h3>
+                        <h3>Phone: {data.user ? data.user.phone : ''}</h3>
+                        <h3>Like: {data.user ? data.user.likes : ''}</h3>
+                        <h3>Dislikes: {data.user ? data.user.dislikes : ''}</h3>
                     </div>
+                </div>
+            </div>
+            <div className='container'>
+                <div>
+                    <h2>Restaurant Details</h2>
+                    <h4>{data.restaurant ? data.restaurant.name : ''}</h4>
+                    <h4>{data.restaurant ? data.restaurant.street : ''}</h4>
+                    <h4>{data.restaurant ? data.restaurant.city : ''}</h4>
+                    <h4>{data.restaurant ? data.restaurant.state : ''}</h4>
+                </div>
+                <div>
+                    <h2>Available Items</h2>
                 </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -55,9 +65,6 @@ const Profile = () => {
                         take me Home
                     </Button>
                 </Link>
-            </div>
-            <div>
-                    <h2>{data.restaurant.name}</h2>
             </div>
         </div>
     );
