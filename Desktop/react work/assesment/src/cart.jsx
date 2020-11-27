@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
 import { Button } from '@material-ui/core';
+import Profile from './profile.jsx';
 
 const useStyles = makeStyles({
     table: {
@@ -34,6 +35,7 @@ function Carts() {
 
     return (
         <>
+            <Profile/>
             <TableContainer component={Paper} style={{ marginTop: '5rem' }}>
                 <Table className={classes.table} aria-label='simple table'>
                     <TableHead>

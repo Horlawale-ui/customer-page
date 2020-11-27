@@ -55,17 +55,19 @@ const Profile = () => {
                 </div>
                 <div>
                     <h2>Available Items</h2>
-                </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Link to='/'>
+                    <div
+                     style={{ display: 'flex', justifyContent: 'center' }}>
+                     <Link to='/cart'>
                     <Button
                         style={{ backgroundColor: 'green', color: 'white' }}
                     >
-                        take me Home
+                        Cart
                     </Button>
                 </Link>
             </div>
+                </div>
+            </div>
+            
         </div>
     );
 };
