@@ -66,6 +66,12 @@ const Profile = () => {
                     </Button>
                 </Link>
             </div>
+<<<<<<< HEAD
+=======
+            <div>
+                <h2>{data.restaurant ? data.restaurant.name : ''}</h2>
+            </div>
+>>>>>>> ab2bad88d8ecda8519ba67c725d2f5f998c5614e
         </div>
     );
 };
